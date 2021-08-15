@@ -6,17 +6,17 @@ class User:
 
     def makeDeposit(self, amount):
         self.accountBalance += amount
-
+        return self
     def makeWithdrawal(self, amount):
         self.accountBalance -= amount
-
+        return self
     def displayUserBalance(self):
         print(self.accountBalance)
-
+        return self
     def transferMoney(self, otherUser, amount):
         otherUser.makeDeposit(amount)
         self.makeWithdrawal(amount)
-
+        return self
 
 orion = User('Orion', 'oAngelcrest@gmail.com')
 silver = User('Silver', 'sRevlis@gmail.com')
