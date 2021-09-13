@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+</head>
+
+<style>
+
+.flex_parent { 
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.flex_parent div {
+    height: 100px;
+    width: 100px;
+}
+h1 {
+    text-align: center;
+    color: green;
+}
+
+</style>
+
+<body>
+
+    <h1>Little Boxes</h1>
+    
+    <div class="flex_parent">
+        {% for num_number_of_times in range(0, num) %}
+        <div style="background-color: {{color}};"></div>
+        {% endfor %}
+        
+    </div>
+
+</body>
+</html>
