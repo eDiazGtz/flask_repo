@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Checkerboard</title>
+</head>
+
+<style>
+.odd {
+    background-color: {{odd_color}};
+} 
+.even {
+    background-color: {{even_color}};
+} 
+</style>
+
+<body>
+    <h1>Checkerboard</h1>
+
+    {% for num in range(y) %}
+        {% if num%2 == 1 %}
+        <div class="flex_parent">
+            {% for box in range(x) %}
+                {% if box%2 == 1 %}
+                <div class="odd"></div>
+                {% else %}
+                <div class="even"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        {% else %}
+
+        <div class="flex_parent">
+            {% for box in range(x) %}
+                {% if box%2 == 1 %}
+                <div class="even"></div>
+                {% else %}
+                <div class="odd"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
