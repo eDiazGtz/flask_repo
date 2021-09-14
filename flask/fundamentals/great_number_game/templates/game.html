@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Guess 1-100</title>
+</head>
+<body class="bg-dark">
+    <div class="container bg-secondary pb-3">
+        <form action="/play" method="POST" class="form-group p-4 m-3">
+        
+            <label for="guess" class="text-light d-flex justify-content-center">GUESS A NUMBER FROM 1-100</label>
+            {% if session['guess'] == 'high' %}
+            <label for="guess" class="text-danger d-flex justify-content-center bg-light font-weight-bold border border-danger rounded-lg">Guess Too High</label>
+            {% elif session['guess'] == 'low' %}
+            <label for="guess" class="text-primary d-flex justify-content-center bg-light font-weight-bold border border-primary rounded-lg">Guess Too Low</label>
+            {% elif session['guess'] == 'correct' %}
+            <label for="guess" class="text-success d-flex justify-content-center bg-light font-weight-bold border border-success rounded-lg">Correct, You Win!!</label>
+            {% endif %}
+            <input type="number" name="guess" min="1" max="100" value="{{session['last_guess']}}" class="form-control">
+
+            {% if session['tries'] > 0 %}
+            <input type="submit" value="Guess Away!" class="btn btn-primary mt-2">
+            {% endif %}
+            <a href="/reset" class="btn btn-danger mt-2">Reset</a>
+        
+        </form>
+        {% if session['tries'] == 0 %}
+        <h5 class="text-danger text-center text-weight-bold bg-light border border-danger rounded-lg">Guesses Left: {{session['tries']}}</h5>
+        <h5 class="text-primary bg-light d-flex justify-content-center border border-primary rounded-lg p-1">The Number was: {{session['win']}}</h5>
+        {% else %}
+        <h5 class="text-light text-center">Guesses Left: {{session['tries']}}</h5>
+        {% endif %}
+    </div>
+</body>
+</html>
