@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Counter</title>
+</head>
+<body class="bg-light">
+    <div class="container border border-dark text-center p-3 mt-4">
+        <h4 class="text-success text-center">Counter</h4>
+        <h5 class="text-secondary text-center">Times this Page has been viewed VS Count Messed with</h5>
+        <h3 class="text-primary p-5">* {{session['count']}} * * {{session['int']}} *</h3>
+        <a href="/count" class="btn btn-outline-primary">Count!</a>
+        <a href="/destroy" class="btn btn-outline-danger">Destroy.</a>
+        <a href="/two" class="btn btn-outline-warning">+2</a>
+
+        <hr>
+
+        <form action="/form" class="form-group" method="POST">
+        
+            <label for="int"></label>
+            <input type="number" name="int" min="1" max="10" value="1" class="p-1">
+
+            <input type="submit" value="Gird Up" class="btn btn-outline-success">
+
+        </form>
+    </div>
+</body>
+</html>
