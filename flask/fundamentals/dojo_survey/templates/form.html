@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Your Life Here</title>
+</head>
+<body class="bg-dark">
+    <div class="container border border-dark bg-light mt-5 pt-2">
+        <h1 class="text-success text-center">Your Life Here</h1>
+        <form action="/result" method="POST" class="form-group">
+        
+            <label for="name">Name: </label>
+            <input type="text" name="name" class="form-control">
+        
+            <label for="dojo">Dojo (choose one): </label>
+            <input type="radio" name="dojo" value="San Diego">
+            <label for="dojo">San Diego</label>
+            <input type="radio" name="dojo" value="NYC">
+            <label for="dojo">NYC</label>
+            <input type="radio" name="dojo" value="Atlanta">
+            <label for="dojo">Atlanta</label>
+            <input type="radio" name="dojo" value="Chicago">
+            <label for="dojo">Chicago</label>
+            
+            <br>
+            <label for="lang">Favorite Language: </label>
+            <select name="lang" class="form-control mb-3">
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+                <option value="Java">Java</option>
+                <option value="MERN">MERN</option>
+        
+            <textarea name="comm" class="form-control" placeholder="Comment (optional)"></textarea>
+
+            <input type="submit" value="Enter Your Life" class="btn btn-outline-success mt-2">
+        
+        </form>
+    </div>
+</body>
+</html>
