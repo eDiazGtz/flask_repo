@@ -1,5 +1,4 @@
-from flask import Flask, render_template, session, redirect
-from flask.globals import request
+from flask import Flask, render_template, session, redirect, request
 
 # F12 -> Application -> Cookies -> http://localhost... -> session -> DELETE
 
