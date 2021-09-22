@@ -1,0 +1,23 @@
+Dojos and Ninjas Queries
+
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('Tokyo', NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('Kyoto', NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('Shikenbukoro', NOW(), NOW());
+DELETE FROM dojos WHERE id = 1;
+DELETE FROM dojos WHERE id = 2;
+DELETE FROM dojos WHERE id = 3;
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('Nagasaki', NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('Sapporo', NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('Hokkaido', NOW(), NOW());
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Kenshin', 'Ruroni', 28, NOW(), NOW(), 4);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Naruto', 'Uzumaki', 28, NOW(), NOW(), 4);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Sasuke', 'Uchiha', 28, NOW(), NOW(), 4);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Itachi', 'Uchiha', 28, NOW(), NOW(), 5);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Kakashi', 'Hatake', 28, NOW(), NOW(), 5);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Hinata', 'Hyuga', 28, NOW(), NOW(), 5);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Sakura', 'Haruno', 28, NOW(), NOW(), 6);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Madara', 'Uchiha', 28, NOW(), NOW(), 6);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id) VALUES ('Rock', 'Lee', 28, NOW(), NOW(), 6);
+SELECT * FROM dojos WHERE id = 4;
+SELECT * FROM dojos WHERE id = 6;
+SELECT * FROM ninjas JOIN dojos ON dojos.id = ninjas.dojo_id WHERE ninjas.id = 9;

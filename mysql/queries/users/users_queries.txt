@@ -1,0 +1,13 @@
+USERS QUERIES
+
+INSERT INTO users (f_name, l_name, email, created_at, updated_at, license_id) VALUES ('Billy', 'Michael', 'bmichael@gmail.com', NOW(), NOW(), 1);
+INSERT INTO users (f_name, l_name, email, created_at, updated_at, license_id) VALUES ('John', 'Smith', 'monkeysmith@hotmail.com', NOW(), NOW(), 2);
+INSERT INTO users (f_name, l_name, email, created_at, updated_at, license_id) VALUES ('Bobby', 'Faragon', 'pantsonfire@yahoo.com', NOW(), NOW(), 3);
+SELECT * FROM users;
+SELECT * FROM users WHERE email = 'bmichael@gmail.com';
+SELECT * FROM users WHERE id = 9;
+UPDATE users SET l_name = 'Pankcakes' WHERE id = 3;
+DELETE FROM ownerships WHERE user_id = 2;
+DELETE FROM users WHERE id = 2;
+SELECT * FROM users ORDER BY f_name;
+SELECT * FROM users ORDER BY f_name DESC;
